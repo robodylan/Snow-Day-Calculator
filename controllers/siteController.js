@@ -14,7 +14,7 @@ module.exports.api = function(req,res) {
     //It's still the morning, calculate based  for today
     if(currentTime.getHours() != 25) {
       sleep(2000);
-      request('http://api.wunderground.com/api/- KEY REMOVED -/forecast/q/' + req.params.location + '.json', function(error, response, body) {
+      request('http://api.wunderground.com/api/e1e738109f12d10c/forecast/q/' + req.params.location + '.json', function(error, response, body) {
           if(req.params.hasOwnProperty('days')) {
             var snowDays = req.params.days;
           }else {
