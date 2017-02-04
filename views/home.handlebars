@@ -24,12 +24,18 @@
     background-color: white;
     font-size: 16px;
     color: #474444;
-    -webkit-appearance:none;
+    display:block;
+    margin-bottom:10px;
+    width:35%;
+    max-width:250px;
+    min-width: 150px;
    }
    div.page-wrapper {
      height:100%;
      width:50%;
+     max-width: 650px;
      margin:auto;
+     margin-top:100px;
    }
    .copyright {
      text-align: center;
@@ -42,17 +48,34 @@
      padding:32px;
    }
    #result-msg {
-     background-color: 	#474444;
-     color: white;
+     color: black;
      padding:8px;
      border-radius: 4px;
      font-size: 16px;
+     width:100%;
+     max-width: 500px;
+     background-color: white;
+     padding: 12px 12px;
+     margin-left:2px;
+     margin-right:2px;
+   }
+   li {
+     font-size: 16px;
+   }
+   ul {
+     list-style: circle;
+   }
+   img  {
+     height: 256px;
+     margin-right:32px;
+     float:left;
    }
    </style>
 
 
 <div class="page-wrapper">
   <div class="panel">
+    <img src="/img/logo.png">
     <!-- Intro -->
     <h1>Snow Day Calculator</h1>
     <p>What's the chance of having a snow day tomorrow?</p>
@@ -62,25 +85,32 @@
       <input id="zipcode" class="text-input" type="text" placeholder="Zipcode">
       <button type="button" class="submit-button" onclick="calculate();">Calculate</button>
     </form>
-    <h3 id="result-msg">Enter information to get accurate and up-to-date results</h3>
+    <p id="result-msg">Accurate results quick! Just fill in the form above.</p>
     <hr>
     <span class="panel-info">
       <h2>Ways to help your chances</h2>
-      <ol>
-        <li>Flush 6 ice cubes down the toilet (prefered)</li>
+      <ul>
+        <li>Flush 6 ice cubes down the toilet (works best!)</li>
         <li>Sleep with a spoon under your pillow</li>
         <li>Sleep with your pajamas inside out</li>
         <li>Shake every snow globe you see</li>
-      </ol>
+      </ul>
     </span>
     <hr>
     <span class="panel-info">
       <h2>Want more weather information?</h2>
-      <p>Checkout Weather Underground -> <a href="">HERE</a></p>
+      <p>Checkout Weather Underground -> <a href="https://www.wunderground.com/?apiref=a56a7c2da5f98618">HERE</a></p>
+    </span>
+    <hr>
+    <span class="panel-info">
+      <h2>Contact</h2>
+      <p>I'd love to here suggestions or concerns</p>
+      <p><strong>Email:</strong> robodylan123@gmail.com</p>
+      <p><strong>Github:</strong> https://github.com/robodylan</p>
     </span>
   </div>
 </div>
 
-<p class="copyright">Copyright &copy 2017 Dylan Dunn. All Rights Reserved</p>
+<p class="copyright">Copyright &copy 2017 Dylan Dunn. All Rights Reserved.</p>
 
 <script src="/js/snow-calc.js"></script>
