@@ -14,6 +14,6 @@ app.get('*', function(req, res) {
   res.send('You messed up or I did, there isn\'t a page here. <a href="/"> Go Back </a>');
 })
 
-app.listen(3000, function() {
+app.listen(80, function() {
   console.log("Express started");
 });
