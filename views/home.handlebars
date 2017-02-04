@@ -4,14 +4,14 @@
     <h1>Snow Day Calculator</h1>
     <p>What's the chance of having a snow day tomorrow?</p>
     <!-- Form -->
-    <div class="col-md-12 input-group">
-    </div>
-    <div class="col-md-12 input-group">
-      <input id="zipcode" name="zipcode" class="form-control input-lg" type="text" placeholder="Zipcode">
-      <span class="input-group-btn">
+    <div class="row">
+      <form class="form-inline">
+          <input id="days" class="form-control input-lg" type="text" placeholder="Snow Days This Year">
+        <input id="zipcode" class="form-control input-lg" type="text" placeholder="Zipcode">
         <button type="button" class="btn btn-info btn-lg" onclick="calculate();">
-        <i class="glyphicon glyphicon-refresh"></i>
-      </span>
+          <i class="glyphicon glyphicon-refresh"></i>
+        </button>
+      </form>
     </div>
     <h3 id="result-msg"></h3>
   </div>
