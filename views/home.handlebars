@@ -1,3 +1,28 @@
-<div class="page-header">
-  <h3>This is a snow day calculator</h3>
+<div class="container col-md-8 col-md-offset-2">
+  <div class="jumbotron">
+    <!-- Intro -->
+    <h1>Snow Day Calculator</h1>
+    <p>What the chance of having a snow day tomorrow?</p>
+    <!-- Form -->
+    <div class="col-md-12 input-group">
+    </div>
+    <div class="col-md-12 input-group">
+      <input name="zipcode" class="form-control input-lg" type="text" placeholder="Zipcode" onclick="calculate()">
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-info btn-lg">
+        <i class="glyphicon glyphicon-refresh"></i>
+      </span>
+    </div>
+  </div>
+  <h6 class="text-center">Copyright &copy 2017 Dylan Dunn. All Rights Reserved</h6>
 </div>
+
+<script>
+function calculate() {
+  var zipcode = '13114';
+  var days = '4'
+  var url = ''
+  $http.get(url)
+}
+
+</script>
