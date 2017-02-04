@@ -22,16 +22,19 @@ module.exports.api = function(req,res) {
           var snowfall = tomorrowForecast.snow_day.cm;
           var temp = tomorrowForecast.low.fahrenheit - 10;
           var windSpeed = tomorrowForecast.maxwind.mph;
-
+          var tempFactor = .25;
           var snowFactor = snowfall / 10;
           if (temp < 0)
           {
-              tempFactor = .5 + (Math.abs(temp) / -50);
-          } else {
-              tempFactor = .5;
+              tempFactor = .75 + (Math.abs(temp) / -50);
+          } else if(snowFactor > .5){
+              tempFactor = .75;
           }
-
-          otherFactor = .5 + (windSpeed / 50);
+          if(snowFactor < 0.5) {
+            otherFactor = (windSpeed / 50)
+          } else {
+            otherFactor = .75 + (windSpeed / 50);
+          }
 
           var finalPercentage = ((snowFactor + tempFactor + otherFactor) / 3) - (Math.pow(snowDays, 2) / 100);
           if (finalPercentage > 1) {
@@ -41,6 +44,9 @@ module.exports.api = function(req,res) {
           if(finalPercentage < 0) {
             finalPercentage = 0;
           }
+          console.log(snowFactor);
+          console.log(tempFactor);
+          console.log(otherFactor);
           res.send({ "Percentage" : Math.round(finalPercentage * 98)});
       });
     }else {

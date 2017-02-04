@@ -2,7 +2,7 @@
   <div class="jumbotron">
     <!-- Intro -->
     <h1>Snow Day Calculator</h1>
-    <p>What the chance of having a snow day tomorrow?</p>
+    <p>What's the chance of having a snow day tomorrow?</p>
     <!-- Form -->
     <div class="col-md-12 input-group">
     </div>
@@ -18,18 +18,4 @@
   <h6 class="text-center">Copyright &copy 2017 Dylan Dunn. All Rights Reserved</h6>
 </div>
 
-<script>
-function calculate() {
-  var zipcode = $('#zipcode').val();
-  var days = '4'
-  var url = '/api/' + zipcode + '/' + days + '/';
-  $('#result-msg').html("Getting the lastest info...");
-  $.ajax({
-    url: url
-  }).then(function(data){
-    $('#result-msg').html("The chance you will have a snow day tomorrow is " + data.Percentage + "%");
-  });
-
-}
-
-</script>
+<script src="/js/snow-calc.js"></script>
