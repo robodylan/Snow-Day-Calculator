@@ -6,7 +6,8 @@
   "dependencies": {
     "express": "^4.14.1",
     "express-handlebars": "^3.0.0",
-    "request": "^2.79.0"
+    "request": "^2.79.0",
+    "thread-sleep": "^2.0.0"
   },
   "devDependencies": {},
   "scripts": {
