@@ -1,6 +1,6 @@
 function calculate() {
   var zipcode = $('#zipcode').val();
-  var days = '4'
+  var days = $('#days').val();
   var url = '/api/' + zipcode + '/' + days + '/';
   $('#result-msg').html("Getting the lastest info...");
   $.ajax({

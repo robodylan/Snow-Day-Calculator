@@ -8,7 +8,6 @@ var exphbs = require('express-handlebars');
 module.exports.home = function(req,res) {
     res.render('home');
 }
-
 module.exports.api = function(req,res) {
     var currentTime = new Date();
     var calculateWithDataFrom;
@@ -16,9 +15,19 @@ module.exports.api = function(req,res) {
     if(currentTime.getHours() != 25) {
       sleep(2000);
       request('http://api.wunderground.com/api/e1e738109f12d10c/forecast/q/' + req.params.location + '.json', function(error, response, body) {
-          var snowDays = req.params.days;
+          if(req.params.hasOwnProperty('days')) {
+            var snowDays = req.params.days;
+          }else {
+            res.send({Percentage : "%Error"});
+          }
           var tomorrowForecast;
-          tomorrowForecast = JSON.parse(body).forecast.simpleforecast.forecastday[1];
+          if(JSON.parse(body).hasOwnProperty('forecast'))
+          {
+            tomorrowForecast = JSON.parse(body).forecast.simpleforecast.forecastday[1];
+          }else {
+            res.send({Percentage : "%N/A"});
+            return;
+          }
           var snowfall = tomorrowForecast.snow_day.cm;
           var temp = tomorrowForecast.low.fahrenheit - 10;
           var windSpeed = tomorrowForecast.maxwind.mph;
