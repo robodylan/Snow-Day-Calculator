@@ -72,6 +72,7 @@ img.logo  {
   margin-right:32px;
   float:left;
   padding-bottom:50px;
+  box-shadow: 2px 2px 5px #888888;
 }
 #donate {
   display:inline-block;
@@ -88,6 +89,7 @@ img.logo  {
   padding:12px;
   text-align: center;
   margin-right:20px;
+  box-shadow: 2px 2px 5px #888888;
 }
 hr {
   margin:20px;
