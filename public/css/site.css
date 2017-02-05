@@ -41,8 +41,12 @@ div.panel {
   max-width: 625px;
   background-color: #eeeeee;
   border-radius: 4px;
-  padding:32px;
   padding:20px;
+  clear: both;
+  display: table;
+  padding-bottom:20px;
+}
+div.panel-info {
   overflow: hidden;
 }
 #result-msg {
@@ -62,10 +66,29 @@ li {
 ul {
   list-style: circle;
 }
-img  {
+img.logo  {
   width:25%;
   min-width: 100px;
   margin-right:32px;
   float:left;
   padding-bottom:50px;
+}
+#donate {
+  display:inline-block;
+  float:right;
+}
+#share {
+  display:inline-block;
+  width:35%;
+  margin:0px;
+  padding:0px;
+  background-color: #477bc3;
+  color:white;
+  text-decoration: none;
+  padding:12px;
+  text-align: center;
+  margin-right:20px;
+}
+hr {
+  margin:20px;
 }

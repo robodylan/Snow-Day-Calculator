@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/css/site.css">
 
 <div class="panel">
-  <img src="/img/logo.png">
+  <img class="logo" src="/img/logo.png">
   <!-- Intro -->
   <h1>Snow Day Calculator</h1>
   <p>What's the chance of having a snow day tomorrow?</p>
@@ -13,11 +13,20 @@
   </form>
   <br>
   <p id="result-msg">Accurate results quick! Just fill in the form above.</p>
-  <a href="https://www.facebook.com/sharer/sharer.php?u=flushingice.com" target="_blank">
+  <div>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=flushingice.com" id="share" target="_blank">
     Share on Facebook
-  </a>
+    </a>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="donate">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="74RX84VX3GH6N">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+  </div>
   <hr>
-  <span class="panel-info">
+  <div class="panel-info">
     <h2>Ways to increase your chances</h2>
     <ul>
       <li>Flush 6 ice cubes down the toilet (works best!)</li>
@@ -25,19 +34,20 @@
       <li>Sleep with your pajamas inside out</li>
       <li>Shake every snow globe you see</li>
     </ul>
-  </span>
+  </div>
   <hr>
-  <span class="panel-info">
+  <div class="panel-info">
+    <img style="float: right; clear:right;" src="https://www.wunderground.com/logos/images/wundergroundLogo_4c.jpg">
     <h2>Want more weather information?</h2>
     <p>Checkout Weather Underground -> <a href="https://www.wunderground.com/?apiref=a56a7c2da5f98618">HERE</a></p>
-  </span>
+  </div>
   <hr>
-  <span class="panel-info">
+  <div class="panel-info">
     <h2>Contact</h2>
     <p>I'd love to here suggestions or concerns</p>
     <p><strong>Email:</strong> robodylan123@gmail.com</p>
     <p><strong>Github:</strong> https://github.com/robodylan</p>
-  </span>
+  </div>
 </div>
 <br>
 <p class="copyright">Copyright &copy 2017 Dylan Dunn. All Rights Reserved.</p>
