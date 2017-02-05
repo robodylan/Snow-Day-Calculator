@@ -108,3 +108,17 @@ div.ad {
   margin: 2px;
   padding:0px;
 }
+table.exp-table {
+  background-color: white;
+  margin-top:12px;
+  margin-bottom:12px;
+  border-collapse: collapse;
+}
+td,tr {
+  border:1px solid black;
+  padding:3px;
+  border-radius: 4px;
+}
+tr:nth-child(even) {
+  background-color: lightgrey;
+}
