@@ -35,16 +35,15 @@ input.text-input {
   text-align: center;
 }
 div.panel {
+  margin:25px;
   margin:auto;
   width:75%;
-  margin-top:100px;
   max-width: 625px;
   background-color: #eeeeee;
   border-radius: 4px;
   padding:20px;
   clear: both;
   display: table;
-  padding-bottom:20px;
 }
 div.panel-info {
   overflow: hidden;
@@ -92,4 +91,20 @@ img.logo  {
 }
 hr {
   margin:20px;
+}
+div.ad {
+  background-color: white;
+  margin:25px;
+  margin-left:auto;
+  margin-right:auto;
+  width:50%;
+  max-width: 625px;
+  padding:0px 20px;
+  text-align: center;
+  background-color: #eeeeee;
+  border-radius: 4px;
+}
+.ad-title {
+  margin: 2px;
+  padding:0px;
 }
