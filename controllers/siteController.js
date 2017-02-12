@@ -34,7 +34,7 @@ module.exports.api = function(req,res) {
           var temp = tomorrowForecast.low.fahrenheit - 10;
           var windSpeed = tomorrowForecast.maxwind.mph;
           var tempFactor = .25;
-          var snowFactor = snowfall / 10;
+          var snowFactor = snowfall / 8;
           if (temp < 0)
           {
               tempFactor = .75 + (Math.abs(temp) / -50);
