@@ -21,14 +21,16 @@ module.exports.api = function(req,res) {
             res.send({Percentage : "%Error"});
           }
           var tomorrowForecast;
+          var todaysForecast;
           if(JSON.parse(body).hasOwnProperty('forecast'))
           {
+            todaysForecast = JSON.parse(body).forecast.simpleforecast.forecastday[0];
             tomorrowForecast = JSON.parse(body).forecast.simpleforecast.forecastday[1];
           }else {
             res.send({Percentage : "%N/A"});
             return;
           }
-          var snowfall = tomorrowForecast.snow_day.cm;
+          var snowfall = tomorrowForecast.snow_day.in + todaysForecast.snow_allday.in;
           var temp = tomorrowForecast.low.fahrenheit - 10;
           var windSpeed = tomorrowForecast.maxwind.mph;
           var tempFactor = .25;
@@ -53,6 +55,7 @@ module.exports.api = function(req,res) {
           if(finalPercentage < 0) {
             finalPercentage = 0;
           }
+          console.log(snowfall + "inches of snow");
           console.log(snowFactor);
           console.log(tempFactor);
           console.log(otherFactor);
